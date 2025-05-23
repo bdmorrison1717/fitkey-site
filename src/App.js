@@ -19,83 +19,64 @@ function App() {
   return (
     <div className="App">
       <header className="hero">
-        <div className="logo">FitKey</div>
-        <div className="tagline">Wellness, Wherever You Go.</div>
-        <div className="cta-buttons">
-          <a href="#">Download the App</a>
-          <a href="#">Become a Partner</a>
-          <button onClick={() => setShowForm(true)}>Join Our Waiting List</button>
+        <div className="hero-overlay">
+          <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
+          <div className="overlay-content">
+            <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-image" />
+            <h1 className="headline">Wellness, Wherever You Go.</h1>
+            <p className="subtext">Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.</p>
+            <div className="cta-buttons">
+              <button className="cta download">Download the App</button>
+              <button className="cta partner">Become a Partner</button>
+            </div>
+          </div>
         </div>
       </header>
 
-      {showForm && (
-        <section className="section">
-          {!submitted ? (
-            <form className="waitlist-form" onSubmit={handleSubmit}>
-              <h3>Join Our Waiting List</h3>
-              <label>Email:</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-
-              <label>I am a:</label>
-              <select name="type" value={formData.type} onChange={handleChange} required>
-                <option value="">Select One</option>
-                <option value="customer">Customer</option>
-                <option value="owner">Owner of a Spa/Gym/Health Facility</option>
-              </select>
-
-              <button type="submit">Submit</button>
-            </form>
-          ) : (
-            <div className="confirmation">
-              <h3>Thank you!</h3>
-              <p>We will get back to you soon!</p>
-            </div>
-          )}
-        </section>
-      )}
-
-      <section className="section">
-        <h2 className="center">How It Works</h2>
-        <div className="features">
-          <div className="feature">
-            <h3>📍 Search</h3>
-            <p>Find nearby gyms, spas, and wellness spaces.</p>
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <div className="steps">
+          <div className="step">
+            <img src="/icon-search.png" alt="Search Icon" />
+            <p>Search Nearby Wellness Spots</p>
           </div>
-          <div className="feature">
-            <h3>🗓️ Book</h3>
-            <p>Reserve your spot instantly from the app.</p>
+          <div className="step">
+            <img src="/icon-book.png" alt="Book Icon" />
+            <p>Book with a Tap</p>
           </div>
-          <div className="feature">
-            <h3>📱 Scan</h3>
-            <p>Check in with a tap using QR code access.</p>
+          <div className="step">
+            <img src="/icon-scan.png" alt="Scan Icon" />
+            <p>Scan & Enter Instantly</p>
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="benefits">
-          <div>
-            <h3>Benefits for Users</h3>
-            <ul>
-              <li>Access fitness and spa facilities in seconds</li>
-              <li>No contracts or paperwork</li>
-              <li>Explore wellness on your terms</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Benefits for Gyms & Spas</h3>
-            <ul>
-              <li>New customers with zero marketing cost</li>
-              <li>QR code check-in + digital waivers</li>
-              <li>Fast automated payouts</li>
-            </ul>
-          </div>
+      <section className="benefits">
+        <div className="column">
+          <h3>Benefits:</h3>
+          <ul>
+            <li>Access fitness and spa facilities in seconds</li>
+            <li>No contracts or paper work</li>
+            <li>Explore wellness on your terms</li>
+          </ul>
+        </div>
+        <div className="column">
+          <h3>For Gyms & Spas:</h3>
+          <ul>
+            <li>New customers with zero marketing cost</li>
+            <li>QR code check-in + digital waivers</li>
+            <li>Fast automated payouts</li>
+          </ul>
         </div>
       </section>
 
-      <div className="footer-cta">
+      <section className="app-preview">
+        <img src="/Iphone.png" alt="FitKey App Preview" className="iphone-image" />
+      </section>
+
+      <footer className="footer-cta">
         Ready to make wellness borderless?
-      </div>
+      </footer>
     </div>
   );
 }
