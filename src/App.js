@@ -24,45 +24,45 @@ function LandingPage({ onShowForm }) {
         <h2>How It Works for Members</h2>
         <div className="steps">
           <div className="step">
-            <img src="/icon-signup.png" alt="Create Account Icon" />
+            <img src="/icon-create account.png" alt="Create Account Icon" />
             <p>Create a FitKey Account</p>
           </div>
           <div className="step">
             <img src="/icon-search.png" alt="Search Icon" />
-            <p>Search</p>
+            <p>Search for Nearby Locations</p>
           </div>
           <div className="step">
             <img src="/icon-book.png" alt="Book Icon" />
-            <p>Book</p>
+            <p>Tap to Book</p>
           </div>
           <div className="step">
             <img src="/icon-scan.png" alt="Scan Icon" />
-            <p>Scan</p>
+            <p>Scan QR Code for Immediate Access</p>
           </div>
         </div>
       </section>
 
       <section className="how-it-works">
-        <h2>How It Works for Gym Partners</h2>
-        <div className="steps">
-          <div className="step">
-            <img src="/icon-signup.png" alt="Sign Up Icon" />
-            <p>Sign Up with FitKey</p>
-          </div>
-          <div className="step">
-            <img src="/icon-scanner.png" alt="Scanner Icon" />
-            <p>Get Physical Scanner</p>
-          </div>
-          <div className="step">
-            <img src="/icon-growth.png" alt="Growth Icon" />
-            <p>Increase Customers & Revenue</p>
-          </div>
-          <div className="step">
-            <img src="/icon-set price.png" alt="Pricing Icon" />
-            <p>Set Your FitKey Member Price</p>
-          </div>
-        </div>
-      </section>
+  <h2>How It Works for Gym Partners</h2>
+  <div className="steps">
+    <div className="step">
+      <img src="/icon-signup.png" alt="Sign Up Icon" />
+      <p>Sign Up with FitKey</p>
+    </div>
+    <div className="step">
+      <img src="/icon-set price.png" alt="Pricing Icon" />
+      <p>Set Your FitKey Member Price</p>
+    </div>
+    <div className="step">
+      <img src="/icon-scanner.png" alt="Scanner Icon" />
+      <p>Get Physical Scanner</p>
+    </div>
+    <div className="step">
+      <img src="/icon-growth.png" alt="Growth Icon" />
+      <p>Increase Customers & Revenue</p>
+    </div>
+  </div>
+</section>
 
       <section className="benefits">
         <div className="column">
