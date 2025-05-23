@@ -5,13 +5,9 @@ body {
   color: #1c1c1c;
 }
 
-a {
-  text-decoration: none;
-}
-
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -20,70 +16,74 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: top;
-}
-
-.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  height: 100%;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
 }
 
 .logo-top {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  height: 240px;
+  height: 135px; /* 3/4 size from 180px */
+  margin-bottom: 1rem;
 }
 
-.headline {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0;
+.hero-text .headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 
-.subtext {
+.hero-text .subtext {
   font-size: 1.25rem;
-  margin: 1rem 0 2rem;
-  max-width: 500px;
+  margin-bottom: 1.5rem;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cta {
   background: white;
   color: #0f766e;
   padding: 0.75rem 1.5rem;
+  border: none;
   border-radius: 8px;
   font-weight: 600;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 }
 
 .cta:hover {
-  background: #e0f2f1;
+  background-color: #e0f2f1;
 }
 
 .how-it-works {
   padding: 4rem 2rem;
-  background: #ffffff;
   text-align: center;
+  background-color: #fff;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f766e;
 }
 
 .steps {
@@ -91,54 +91,47 @@ a {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .step {
-  flex: 1 1 200px;
-  max-width: 220px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 200px;
 }
 
 .step img {
-  width: 64px;
+  width: 80px;
   height: auto;
   margin-bottom: 0.5rem;
 }
 
 .step p {
-  font-size: 1rem;
   font-weight: 500;
 }
 
 .benefits {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  background: #f0fdfa;
   padding: 4rem 2rem;
-}
-
-.column {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
+  background-color: #f0fdfa;
+  text-align: left;
 }
 
 .column h3 {
-  font-size: 1.25rem;
+  color: #0f766e;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .column ul {
   list-style-type: disc;
   padding-left: 1.5rem;
-  text-align: left;
 }
 
 .app-preview {
-  padding: 4rem 2rem;
   text-align: center;
-  background: #ffffff;
+  background-color: white;
+  padding: 3rem 2rem;
 }
 
 .iphone-image {
@@ -146,17 +139,26 @@ a {
   width: 100%;
 }
 
+.footer-cta {
+  background: #0f766e;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .waitlist-form {
   max-width: 500px;
-  margin: 4rem auto;
+  margin: 5rem auto;
   background: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .waitlist-form h3 {
-  text-align: center;
   margin-bottom: 1.5rem;
 }
 
@@ -182,9 +184,6 @@ a {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  width: 100%;
-  margin-top: 0.5rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .confirmation {
@@ -192,16 +191,5 @@ a {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 500px;
-  margin: 4rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.footer-cta {
-  background: #0f766e;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
 }

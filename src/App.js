@@ -1,33 +1,20 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({ email: '', type: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
+function LandingPage({ onShowForm }) {
   return (
     <div className="App">
       <header className="hero">
-        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
+        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" style={{ objectPosition: 'top' }} />
         <div className="hero-overlay">
-          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" />
+          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" style={{ height: '180px', margin: '0 auto', display: 'block' }} />
           <div className="hero-text">
             <h1 className="headline">Wellness, Wherever You Go.</h1>
             <p className="subtext">Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.</p>
             <div className="cta-buttons">
-              <button className="cta download">Become a Member</button>
-              <button className="cta partner">Become a Gym Partner</button>
+              <Link to="/join" className="cta download">Become a Member</Link>
+              <Link to="/join" className="cta partner">Become a Gym Partner</Link>
             </div>
           </div>
         </div>
@@ -37,16 +24,20 @@ function App() {
         <h2>How It Works for Members</h2>
         <div className="steps">
           <div className="step">
+            <img src="/icon-signup.png" alt="Create Account Icon" />
+            <p>Create a FitKey Account</p>
+          </div>
+          <div className="step">
             <img src="/icon-search.png" alt="Search Icon" />
-            <p>Search Nearby Wellness Spots</p>
+            <p>Search</p>
           </div>
           <div className="step">
             <img src="/icon-book.png" alt="Book Icon" />
-            <p>Book with a Tap</p>
+            <p>Book</p>
           </div>
           <div className="step">
             <img src="/icon-scan.png" alt="Scan Icon" />
-            <p>Scan & Enter Instantly</p>
+            <p>Scan</p>
           </div>
         </div>
       </section>
@@ -64,7 +55,11 @@ function App() {
           </div>
           <div className="step">
             <img src="/icon-growth.png" alt="Growth Icon" />
-            <p>Start Getting More Customers</p>
+            <p>Increase Customers & Revenue</p>
+          </div>
+          <div className="step">
+            <img src="/icon-set price.png" alt="Pricing Icon" />
+            <p>Set Your FitKey Member Price</p>
           </div>
         </div>
       </section>
@@ -96,6 +91,56 @@ function App() {
         Ready to make wellness borderless?
       </footer>
     </div>
+  );
+}
+
+function JoinPage() {
+  const [formData, setFormData] = useState({ email: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="waitlist-form">
+      {!submitted ? (
+        <>
+          <h3>Join Our Waiting List</h3>
+          <form onSubmit={handleSubmit}>
+            <label>Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </>
+      ) : (
+        <div className="confirmation">
+          <p>Thank you! We'll be in touch soon.</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/join" element={<JoinPage />} />
+      </Routes>
+    </Router>
   );
 }
 
