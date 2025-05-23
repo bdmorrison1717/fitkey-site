@@ -19,22 +19,22 @@ function App() {
   return (
     <div className="App">
       <header className="hero">
+        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
         <div className="hero-overlay">
-          <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
-          <div className="overlay-content">
-            <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-image" />
+          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" />
+          <div className="hero-text">
             <h1 className="headline">Wellness, Wherever You Go.</h1>
             <p className="subtext">Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.</p>
             <div className="cta-buttons">
-              <button className="cta download">Download the App</button>
-              <button className="cta partner">Become a Partner</button>
+              <button className="cta download">Become a Member</button>
+              <button className="cta partner">Become a Gym Partner</button>
             </div>
           </div>
         </div>
       </header>
 
       <section className="how-it-works">
-        <h2>How It Works</h2>
+        <h2>How It Works for Members</h2>
         <div className="steps">
           <div className="step">
             <img src="/icon-search.png" alt="Search Icon" />
@@ -51,9 +51,27 @@ function App() {
         </div>
       </section>
 
+      <section className="how-it-works">
+        <h2>How It Works for Gym Partners</h2>
+        <div className="steps">
+          <div className="step">
+            <img src="/icon-signup.png" alt="Sign Up Icon" />
+            <p>Sign Up with FitKey</p>
+          </div>
+          <div className="step">
+            <img src="/icon-scanner.png" alt="Scanner Icon" />
+            <p>Get Physical Scanner</p>
+          </div>
+          <div className="step">
+            <img src="/icon-growth.png" alt="Growth Icon" />
+            <p>Start Getting More Customers</p>
+          </div>
+        </div>
+      </section>
+
       <section className="benefits">
         <div className="column">
-          <h3>Benefits:</h3>
+          <h3>Member Benefits:</h3>
           <ul>
             <li>Access fitness and spa facilities in seconds</li>
             <li>No contracts or paper work</li>
@@ -61,7 +79,7 @@ function App() {
           </ul>
         </div>
         <div className="column">
-          <h3>For Gyms & Spas:</h3>
+          <h3>Gym Partner Benefits:</h3>
           <ul>
             <li>New customers with zero marketing cost</li>
             <li>QR code check-in + digital waivers</li>
