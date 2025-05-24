@@ -51,7 +51,7 @@ function Home() {
             <p>Sign up for FitKey</p>
           </div>
           <div className="step">
-            <img src="icon - set price.png" alt="Set Price" />
+            <img src="icon-set price.png" alt="Set Price" />
             <p>Set Your FitKey Member Price</p>
           </div>
           <div className="step">
