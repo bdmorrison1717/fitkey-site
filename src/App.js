@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-function LandingPage({ onShowForm }) {
+function LandingPage() {
   return (
     <div className="App">
       <header className="hero">
-        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" style={{ objectPosition: 'top' }} />
+        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
         <div className="hero-overlay">
-          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" style={{ height: '180px', margin: '0 auto', display: 'block' }} />
+          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" />
           <div className="hero-text">
             <h1 className="headline">Wellness, Wherever You Go.</h1>
             <p className="subtext">Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.</p>
@@ -43,43 +43,24 @@ function LandingPage({ onShowForm }) {
       </section>
 
       <section className="how-it-works">
-  <h2>How It Works for Gym Partners</h2>
-  <div className="steps">
-    <div className="step">
-      <img src="/icon-signup.png" alt="Sign Up Icon" />
-      <p>Sign Up with FitKey</p>
-    </div>
-    <div className="step">
-      <img src="/icon-set price.png" alt="Pricing Icon" />
-      <p>Set Your FitKey Member Price</p>
-    </div>
-    <div className="step">
-      <img src="/icon-scanner.png" alt="Scanner Icon" />
-      <p>Get Physical Scanner</p>
-    </div>
-    <div className="step">
-      <img src="/icon-growth.png" alt="Growth Icon" />
-      <p>Increase Customers & Revenue</p>
-    </div>
-  </div>
-</section>
-
-      <section className="benefits">
-        <div className="column">
-          <h3>Member Benefits:</h3>
-          <ul>
-            <li>Access fitness and spa facilities in seconds</li>
-            <li>No contracts or paper work</li>
-            <li>Explore wellness on your terms</li>
-          </ul>
-        </div>
-        <div className="column">
-          <h3>Gym Partner Benefits:</h3>
-          <ul>
-            <li>New customers with zero marketing cost</li>
-            <li>QR code check-in + digital waivers</li>
-            <li>Fast automated payouts</li>
-          </ul>
+        <h2>How It Works for Gym Partners</h2>
+        <div className="steps">
+          <div className="step">
+            <img src="/icon-signup.png" alt="Sign Up Icon" />
+            <p>Sign Up with FitKey</p>
+          </div>
+          <div className="step">
+            <img src="/icon-set price.png" alt="Pricing Icon" />
+            <p>Set Your FitKey Member Price</p>
+          </div>
+          <div className="step">
+            <img src="/icon-scanner.png" alt="Scanner Icon" />
+            <p>Get Physical Scanner</p>
+          </div>
+          <div className="step">
+            <img src="/icon-growth.png" alt="Growth Icon" />
+            <p>Increase Customers & Revenue</p>
+          </div>
         </div>
       </section>
 
