@@ -3,46 +3,40 @@ import './App.css';
 
 function WaitlistPage() {
   const [email, setEmail] = useState('');
-  const [userType, setUserType] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Normally you would send the email to a server here
+    console.log('Email submitted:', email);
     setSubmitted(true);
   };
 
   return (
-    <div className="waitlist-form">
-      {submitted ? (
-        <div className="confirmation">
-          <h3>Thank you!</h3>
-          <p>We'll be in touch with you soon.</p>
-        </div>
-      ) : (
-        <>
-          <h3>Join Our Waiting List</h3>
-          <form onSubmit={handleSubmit}>
-            <label>Email</label>
-            <input 
-              type="email" 
-              required 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
-            />
-            <label>You are a:</label>
-            <select 
-              required 
-              value={userType} 
-              onChange={(e) => setUserType(e.target.value)}
-            >
-              <option value="">Select one</option>
-              <option value="customer">Customer</option>
-              <option value="owner">Owner of Spa/Gym/Health Facility</option>
-            </select>
-            <button type="submit">Submit</button>
-          </form>
-        </>
-      )}
+    <div className="waitlist-container">
+      <div className="waitlist-box">
+        {!submitted ? (
+          <>
+            <h2>Join Our Waiting List</h2>
+            <p>Enter your email below to be the first to get access:</p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button type="submit">Join</button>
+            </form>
+          </>
+        ) : (
+          <div className="confirmation-message">
+            <h3>Thank you!</h3>
+            <p>You've been added to the waitlist.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

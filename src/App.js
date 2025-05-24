@@ -11,7 +11,9 @@ function Home() {
       <div className="hero">
         <img src="hero-image.jpg" alt="Gym background" className="hero-image" />
         <div className="hero-overlay">
-          <img src="fitkey-logo-transparent.png" alt="FitKey Logo" className="logo-large" />
+          <div className="logo-container">
+            <img src="fitkey-logo-app-style.png" alt="FitKey Logo" className="logo-image" />
+          </div>
           <h1 className="headline">Wellness, Wherever You Go.</h1>
           <p className="subtext">
             Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.
@@ -53,7 +55,7 @@ function Home() {
             <p>Sign up for FitKey</p>
           </div>
           <div className="step">
-            <img src="icon-set-price.png" alt="Set Price" />
+            <img src="icon-set price updated.png" alt="Set Price" />
             <p>Set Your FitKey Member Price</p>
           </div>
           <div className="step">
@@ -64,6 +66,25 @@ function Home() {
             <img src="icon-growth.png" alt="Growth" />
             <p>Increase Customers & Revenue</p>
           </div>
+        </div>
+      </div>
+
+      <div className="benefits-section">
+        <div className="benefits-column">
+          <h3>Member Benefits</h3>
+          <ul>
+            <li>Access fitness and spa facilities in seconds</li>
+            <li>No contracts or paperwork</li>
+            <li>Explore wellness on your terms</li>
+          </ul>
+        </div>
+        <div className="benefits-column">
+          <h3>Gym Partner Benefits</h3>
+          <ul>
+            <li>New customers with zero marketing cost</li>
+            <li>QR code check-in + digital waivers</li>
+            <li>Fast automated payouts</li>
+          </ul>
         </div>
       </div>
 

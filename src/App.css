@@ -1,20 +1,18 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   color: #1c1c1c;
 }
 
 .hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  text-align: center;
 }
 
 .hero-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -25,33 +23,37 @@ body {
   width: 100%;
   height: 100%;
   color: white;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
-  text-align: center;
 }
 
-.logo-top {
-  width: 120px;
+.logo-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin-bottom: 1rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  background-color: white;
-  padding: 10px;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
 }
 
 .headline {
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
 }
 
 .subtext {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 .cta-buttons {
@@ -69,7 +71,6 @@ body {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 }
@@ -80,7 +81,14 @@ body {
 
 .how-it-works {
   padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.how-it-works h2 {
   text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #0f766e;
 }
 
 .steps-grid {
@@ -88,29 +96,65 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .step {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 2rem;
-  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
 }
 
 .step img {
-  max-width: 60px;
+  max-width: 80px;
+  height: auto;
   margin-bottom: 1rem;
+}
+
+.benefits-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.benefits-column {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin: 1rem;
+}
+
+.benefits-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0f766e;
+}
+
+.benefits-column ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #1c1c1c;
+}
+
+.benefits-column li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 .app-preview {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
 }
 
 .iphone-image {
   max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
 .footer-cta {
