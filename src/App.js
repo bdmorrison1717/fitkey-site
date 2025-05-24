@@ -1,115 +1,75 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import WaitlistPage from './WaitlistPage';
 
-function LandingPage() {
+function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="App">
-      <header className="hero">
-        <img src="/hero-image.jpg" alt="FitKey QR Scan" className="hero-image" />
+      <div className="hero">
+        <img src="hero-image.jpg" alt="Gym background" className="hero-image" />
         <div className="hero-overlay">
-          <img src="/fitkey-logo.png" alt="FitKey Logo" className="logo-top" />
-          <div className="hero-text">
-            <h1 className="headline">Wellness, Wherever You Go.</h1>
-            <p className="subtext">Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.</p>
-            <div className="cta-buttons">
-              <Link to="/join" className="cta download">Become a Member</Link>
-              <Link to="/join" className="cta partner">Become a Gym Partner</Link>
-            </div>
+          <img src="fitkey-logo.png" alt="FitKey Logo" className="logo-top" />
+          <h1 className="headline">Wellness, Wherever You Go.</h1>
+          <p className="subtext">
+            Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.
+          </p>
+          <div className="cta-buttons">
+            <button className="cta" onClick={() => navigate('/waitlist')}>Become a Member</button>
+            <button className="cta" onClick={() => navigate('/waitlist')}>Become a Gym Partner</button>
           </div>
         </div>
-      </header>
-
-      <section className="how-it-works">
+      </div>
+      <div className="how-it-works">
         <h2>How It Works for Members</h2>
         <div className="steps">
           <div className="step">
-            <img src="/icon-create account.png" alt="Create Account Icon" />
-            <p>Create a FitKey Account</p>
+            <img src="icon-create account.png" alt="Create Account" />
+            <p>Create an Account</p>
           </div>
           <div className="step">
-            <img src="/icon-search.png" alt="Search Icon" />
+            <img src="icon-search.png" alt="Search" />
             <p>Search for Nearby Locations</p>
           </div>
           <div className="step">
-            <img src="/icon-book.png" alt="Book Icon" />
+            <img src="icon-book.png" alt="Book" />
             <p>Tap to Book</p>
           </div>
           <div className="step">
-            <img src="/icon-scan.png" alt="Scan Icon" />
+            <img src="icon-scan.png" alt="Scan" />
             <p>Scan QR Code for Immediate Access</p>
           </div>
         </div>
-      </section>
-
-      <section className="how-it-works">
+      </div>
+      <div className="how-it-works">
         <h2>How It Works for Gym Partners</h2>
         <div className="steps">
           <div className="step">
-            <img src="/icon-signup.png" alt="Sign Up Icon" />
-            <p>Sign Up with FitKey</p>
+            <img src="icon-signup.png" alt="Sign up" />
+            <p>Sign up for FitKey</p>
           </div>
           <div className="step">
-            <img src="/icon-set price.png" alt="Pricing Icon" />
+            <img src="icon - set price.png" alt="Set Price" />
             <p>Set Your FitKey Member Price</p>
           </div>
           <div className="step">
-            <img src="/icon-scanner.png" alt="Scanner Icon" />
+            <img src="icon-scanner.png" alt="Scanner" />
             <p>Get Physical Scanner</p>
           </div>
           <div className="step">
-            <img src="/icon-growth.png" alt="Growth Icon" />
+            <img src="icon-growth.png" alt="Growth" />
             <p>Increase Customers & Revenue</p>
           </div>
         </div>
-      </section>
-
-      <section className="app-preview">
-        <img src="/Iphone.png" alt="FitKey App Preview" className="iphone-image" />
-      </section>
-
-      <footer className="footer-cta">
+      </div>
+      <div className="app-preview">
+        <img src="Iphone.png" alt="App Preview" className="iphone-image" />
+      </div>
+      <div className="footer-cta">
         Ready to make wellness borderless?
-      </footer>
-    </div>
-  );
-}
-
-function JoinPage() {
-  const [formData, setFormData] = useState({ email: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  return (
-    <div className="waitlist-form">
-      {!submitted ? (
-        <>
-          <h3>Join Our Waiting List</h3>
-          <form onSubmit={handleSubmit}>
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit">Submit</button>
-          </form>
-        </>
-      ) : (
-        <div className="confirmation">
-          <p>Thank you! We'll be in touch soon.</p>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -118,8 +78,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/join" element={<JoinPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/waitlist" element={<WaitlistPage />} />
       </Routes>
     </Router>
   );

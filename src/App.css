@@ -7,15 +7,16 @@ body {
 
 .hero {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
-  object-position: top;
+  object-position: 20% center;
   position: absolute;
   top: 0;
   left: 0;
@@ -30,40 +31,38 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 2rem;
   text-align: center;
   color: white;
+  padding: 2rem;
 }
 
 .logo-top {
-  height: 135px;
+  width: 150px;
   margin-bottom: 1rem;
 }
 
-.hero-text .headline {
+.headline {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0.5rem 0;
 }
 
-.hero-text .subtext {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+.subtext {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .cta {
   background: white;
   color: #0f766e;
   padding: 0.75rem 1.5rem;
-  border: none;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -72,19 +71,18 @@ body {
 }
 
 .cta:hover {
-  background-color: #e0f2f1;
+  background: #e0f2f1;
 }
 
 .how-it-works {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  background: #fff;
 }
 
 .how-it-works h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #0f766e;
 }
 
 .steps {
@@ -95,49 +93,29 @@ body {
 }
 
 .step {
-  flex: 1;
-  min-width: 180px;
-  max-width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 250px;
 }
 
 .step img {
-  width: 80px;
+  width: 60px;
   height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.step p {
-  font-weight: 500;
-}
-
-.benefits {
-  display: flex;
-  justify-content: space-around;
-  padding: 4rem 2rem;
-  background-color: #f0fdfa;
-  text-align: left;
-}
-
-.column h3 {
-  color: #0f766e;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.column ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
 .app-preview {
+  padding: 4rem 2rem;
   text-align: center;
-  background-color: white;
-  padding: 3rem 2rem;
+  background: #f0f4f8;
 }
 
 .iphone-image {
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
+  max-width: 100%;
 }
 
 .footer-cta {
@@ -151,7 +129,7 @@ body {
 
 .waitlist-form {
   max-width: 500px;
-  margin: 5rem auto;
+  margin: 4rem auto;
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -185,6 +163,7 @@ body {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .confirmation {
@@ -192,5 +171,7 @@ body {
   background: white;
   padding: 2rem;
   border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
