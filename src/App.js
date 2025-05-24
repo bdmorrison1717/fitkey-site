@@ -11,7 +11,7 @@ function Home() {
       <div className="hero">
         <img src="hero-image.jpg" alt="Gym background" className="hero-image" />
         <div className="hero-overlay">
-          <img src="fitkey-logo-noborder.png" alt="FitKey Logo" className="logo-top" />
+          <img src="fitkey-logo-app-style.png" alt="FitKey Logo" className="logo-top" />
           <h1 className="headline">Wellness, Wherever You Go.</h1>
           <p className="subtext">
             Get instant access to gyms, spas, and wellness spaces — no memberships, no hassle.
