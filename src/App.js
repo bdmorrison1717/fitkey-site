@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-import WaitlistPage from './WaitlistPage';
+import WaitlistPage from './WaitlistPage.js';
 
 function Home() {
   const navigate = useNavigate();
