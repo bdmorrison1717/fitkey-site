@@ -35,15 +35,7 @@ body {
   padding: 2rem;
 }
 
-.logo-container {
-  background: white;
-  padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.5rem;
-}
-
-.logo-image {
+..logo-image {
   height: 240px; /* 3x larger than original */
   width: auto;
 }
