@@ -2,15 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function WaitlistPage() {
-  const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Normally you would send the email to a server here
-    console.log('Email submitted:', email);
-    setSubmitted(true);
-  };
 
   return (
     <div className="waitlist-container">
@@ -19,12 +11,15 @@ function WaitlistPage() {
           <>
             <h2>Join Our Waiting List</h2>
             <p>Enter your email below to be the first to get access:</p>
-            <form onSubmit={handleSubmit}>
+            <form
+              action="https://formspree.io/f/meogbgnj"
+              method="POST"
+              onSubmit={() => setSubmitted(true)}
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <button type="submit">Join</button>
