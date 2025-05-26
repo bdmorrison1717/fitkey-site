@@ -14,7 +14,24 @@ function WaitlistPage() {
             <form
               action="https://formspree.io/f/meogbgnj"
               method="POST"
-              onSubmit={() => setSubmitted(true)}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.target;
+                const data = new FormData(form);
+                fetch(form.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                    Accept: 'application/json',
+                  },
+                }).then((response) => {
+                  if (response.ok) {
+                    setSubmitted(true);
+                  } else {
+                    alert('There was a problem submitting the form.');
+                  }
+                });
+              }}
             >
               <input
                 type="email"
@@ -22,7 +39,7 @@ function WaitlistPage() {
                 placeholder="Your email"
                 required
               />
-              
+
               <label>
                 I'm interested in:
                 <select name="userType" required>
