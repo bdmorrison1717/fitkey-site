@@ -252,3 +252,39 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 480px) {
+  .hero-overlay {
+    padding: 1rem;
+  }
+
+  .logo-container {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-image {
+    object-position: center top;
+  }
+}
