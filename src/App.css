@@ -90,97 +90,6 @@ body {
   background: #e0f2f1;
 }
 
-/* How It Works */
-.how-it-works {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-}
-
-.how-it-works h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #0f766e;
-}
-
-.steps-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.step {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  flex: 1 1 200px;
-  max-width: 220px;
-  text-align: center;
-}
-
-.step img {
-  max-width: 80px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-/* Benefits Section */
-.benefits-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-}
-
-.benefits-column {
-  flex: 1 1 300px;
-  max-width: 400px;
-  margin: 1rem;
-}
-
-.benefits-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #0f766e;
-}
-
-.benefits-column ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  color: #1c1c1c;
-}
-
-.benefits-column li {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-}
-
-/* App Preview */
-.app-preview {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #f9f9f9;
-}
-
-.iphone-image {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-}
-
-/* Footer CTA */
-.footer-cta {
-  background: #0f766e;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
 /* Waitlist Page */
 .waitlist-container {
   display: flex;
@@ -195,7 +104,7 @@ body {
   background: white;
   padding: 2rem;
   border-radius: 16px;
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -206,28 +115,32 @@ body {
   color: #0f766e;
 }
 
-.waitlist-box input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.waitlist-box p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #444;
 }
 
+.waitlist-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.waitlist-box label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1c1c1c;
+}
+
+.waitlist-box input,
 .waitlist-box select {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.waitlist-box label {
-  display: block;
-  text-align: left;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #1c1c1c;
+  font-size: 1rem;
 }
 
 .waitlist-box button {
@@ -238,6 +151,7 @@ body {
   padding: 0.75rem;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -252,6 +166,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .hero-overlay {
     padding: 1.5rem;
@@ -261,13 +177,11 @@ body {
 
   .headline {
     font-size: 2rem;
-    text-align: center;
     margin: 1rem 0;
   }
 
   .subtext {
     font-size: 1rem;
-    text-align: center;
     padding: 0 1rem;
   }
 
@@ -285,6 +199,18 @@ body {
   .cta {
     width: 100%;
     max-width: 280px;
-    text-align: center;
+  }
+
+  .waitlist-box {
+    padding: 1.5rem;
+  }
+
+  .waitlist-box input,
+  .waitlist-box select {
+    font-size: 0.95rem;
+  }
+
+  .waitlist-box button {
+    font-size: 0.95rem;
   }
 }
